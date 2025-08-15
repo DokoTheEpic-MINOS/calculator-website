@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Calculator container */
+.calculator {
+    background: #1e1e2f;
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+/* Display */
+.display {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background: #2c2c3f;
+    color: #fff;
+}
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* General button style */
+button {
+    padding: 20px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Number buttons */
+.btn {
+    background: #2c2c3f;
+    color: #fff;
+}
+
+/* Operator buttons */
+.btn.operator {
+    background: #ff9500;
+    color: #fff;
+}
+
+/* Function buttons (C, DEL) */
+.btn.function {
+    background: #ff3b30;
+    color: #fff;
+}
+
+/* Equal button */
+.btn.equal {
+    background: #34c759;
+    color: #fff;
+    grid-row: span 2;
+}
+
+/* Zero button spans two columns */
+.btn.zero {
+    grid-column: span 2;
+}
+
+/* Hover effects */
+button:hover {
+    filter: brightness(1.2);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .display {
+        font-size: 1.8rem;
+        height: 50px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Button press effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
